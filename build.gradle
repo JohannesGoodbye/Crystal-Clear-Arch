@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
 }
 
 architectury {
@@ -18,12 +18,9 @@ subprojects {
         mavenLocal()
         mavenCentral()
         maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
-        maven { // Flywheel
-            url = "https://maven.tterrag.com/"
-            content {
-                includeGroup("com.jozufozu.flywheel")
-            }
-        }
+        maven { url = "https://maven.tterrag.com" } // Registrate
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     }
 
     dependencies {
